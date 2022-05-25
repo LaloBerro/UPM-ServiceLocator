@@ -29,5 +29,15 @@ namespace ServiceLocatorPattern
 
             return (ServiceType)service;
         }
+
+        public void RemoveService<ServiceType>()
+        {
+            Type type = typeof(ServiceType);
+
+            if (!_services.ContainsKey(type))
+                throw new Exception($"The service {type.Name} is not in the service locator. So you can't remove.");
+
+            _services.Remove(type);
+        }
     }
 }
