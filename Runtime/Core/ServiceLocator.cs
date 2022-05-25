@@ -13,14 +13,14 @@ namespace ServiceLocatorPattern
             _services = new Dictionary<Type, object>();
         }
 
-        public void AddService<ServiceType>(ServiceType service)
+        public void Register<ServiceType>(ServiceType service)
         {
             Type type = typeof(ServiceType);
 
             _services.Add(type, service);
         }
 
-        public ServiceType GetService<ServiceType>()
+        public ServiceType Get<ServiceType>()
         {
             Type type = typeof(ServiceType);
 
@@ -30,7 +30,7 @@ namespace ServiceLocatorPattern
             return (ServiceType)service;
         }
 
-        public void RemoveService<ServiceType>()
+        public void Remove<ServiceType>()
         {
             Type type = typeof(ServiceType);
 
