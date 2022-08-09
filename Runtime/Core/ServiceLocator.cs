@@ -39,5 +39,12 @@ namespace ServiceLocatorPattern
 
             _services.Remove(type);
         }
+
+        public bool IsContained<ServiceType>(ServiceType service)
+        {
+            Type type = typeof(ServiceType);
+
+            return _services.ContainsKey(type);
+        }
     }
 }
