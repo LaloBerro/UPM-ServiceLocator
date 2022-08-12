@@ -40,7 +40,7 @@ namespace ServiceLocatorPattern
             _services.Remove(type);
         }
 
-        public bool IsContained<ServiceType>(ServiceType service)
+        public bool IsContained<ServiceType>()
         {
             Type type = typeof(ServiceType);
 
