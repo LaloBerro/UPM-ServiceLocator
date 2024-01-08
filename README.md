@@ -1,3 +1,4 @@
-# Unity Package Template
+# Service Locator -- Unity
 
-This is a template for an empty unity package
+Link to Medium explaining the code:
+https://medium.com/@laurencioberro/service-locator-unity-c9b28d199845
