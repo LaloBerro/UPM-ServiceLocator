@@ -1,19 +1,13 @@
 using System;
 using System.Collections.Generic;
-using SingletonPattern;
 
 namespace ServiceLocatorPattern
 {
-    public class ServiceLocator : Singleton<ServiceLocator>
+    public class ServiceLocator : IServiceLocator
     {
-        private readonly Dictionary<Type, object> _services;
+        private readonly Dictionary<Type, object> _services = new();
 
-        public ServiceLocator()
-        {
-            _services = new Dictionary<Type, object>();
-        }
-
-        public void Register<ServiceType>(ServiceType service)
+        public void Add<ServiceType>(ServiceType service)
         {
             Type type = typeof(ServiceType);
 

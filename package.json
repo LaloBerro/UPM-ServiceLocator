@@ -1,6 +1,6 @@
 {
   "name": "com.lalo.servicelocator",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "displayName": "ServiceLocator",
   "unity": "2020.3",
   "unityRelease": "0b5",
@@ -14,5 +14,12 @@
     "url": ""
   },
   "type": "tool",
-  "hideInEditor": false
+  "hideInEditor": false,
+  "samples": [
+    {
+      "displayName": "Samples",
+      "description": "",
+      "path": "Samples~/ServiceLocator"
+    }
+  ]
 }
