@@ -19,7 +19,7 @@ namespace ServiceLocatorPattern
             Type type = typeof(ServiceType);
 
             if (!_services.TryGetValue(type, out var service))
-                throw new Exception("There isn't a service with the type: " + type.Name);
+                return default;
 
             return (ServiceType)service;
         }
